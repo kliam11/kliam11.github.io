@@ -1,0 +1,101 @@
+* { 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html { 
+    position: relative;
+    margin: 5%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    overflow-x: hidden; 
+    padding: 0px;
+}
+
+hr { 
+    background-color: blue
+}
+
+.gray-hr { 
+    background-color: gray;
+}
+
+header h4, body h5, body h6 { 
+    font-weight: bold;
+}
+
+header a { 
+    padding-right: 10px;
+    color: inherit;
+}
+
+header a:hover { 
+    text-decoration: none;
+    color: inherit;
+}
+
+p { 
+    text-align: justify;
+}
+
+ul { 
+    list-style: none;
+}
+
+img { 
+    filter: drop-shadow(0px 0px 2px gray);
+    image-resolution: 100dpi; 
+} 
+
+.project, .work { 
+    background-color: rgba(234, 234, 234, 0.231);
+    border-radius: 25px;
+    border-style: groove;
+    border-width: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+    filter: drop-shadow(0px 0px 5px lightgray);
+}
+
+.project div, .work div { 
+    margin: 10px;
+}
+
+#projects img { 
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#linkedin, #email, #github { 
+    margin: 10px;
+    font-size: 40px;
+}
+
+#linkedin { 
+    color: blue;
+}
+#email { 
+    color: red;
+}
+#github { 
+    color: black;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+.column {
+    flex: 33.3%;
+    max-width: 33.3%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 95%;
+}
+  

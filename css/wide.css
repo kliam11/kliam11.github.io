@@ -1,0 +1,23 @@
+p, li { 
+    font-size: larger;
+}
+
+#about-pfp { 
+    float: right;
+    margin-left: 2.5%;
+    width: 350px;
+}
+
+#about-pfp figure { 
+    text-align: center;
+}
+
+#pfp { 
+    min-width: 350px;
+    max-width: 350px;
+}
+
+.project img { 
+    min-width: 475px;
+    width: 50%;
+}

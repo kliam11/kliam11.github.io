@@ -1,0 +1,19 @@
+#pfp { 
+    float: top;
+    margin-bottom: 5px; 
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#about-pfp { 
+    text-align: center;
+}
+
+.project img { 
+    width: 100%;
+}
+
+.column {
+    flex: 100%;
+    max-width: 100%;
+  }

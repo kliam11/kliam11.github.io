@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <title>Liam Kelly - Developer</title>
+        <link rel="stylesheet"href="css/shared.css">
+        <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/mobile.css">
+        <link rel="stylesheet" media="screen and (min-width: 600px)" href="css/wide.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <header> 
+        <div class="container-fluid">
+            <h4>Liam Kelly</h4><br>
+            <a href="index.html">Current</a>
+            <a href="about">About</a>
+            <a href="work">Work</a>
+            <a href="projects">Projects</a>
+            <a href="contact">Contact</a>
+            <hr>
+        </div>
+    </header>
+    <body id="work"> 
+        <div class="container-fluid">
+            <h5>Work</h5>
+            <p>My experiences so far:</p>
+
+            <div class="work"> 
+                <div>
+                    <h6>IT Support - Desktop Engineering Team</h6>
+                    <p><i>June 2022 to September 2022</i></p>
+                    <p>
+                        TBA
+                    </p>
+                </div>
+            </div>
+            <div class="work"> 
+                <div>
+                    <h6>Campus Tour Guide</h6>
+                    <p><i>November 2022 to Present</i></p>
+                    <p>
+                        Led tours of the Carleton Univeristy campus to show future students and their families the school. I 
+                        provided them information about programs at the school, such as what daily life is like, how the academic 
+                        structure works and prerequisites for courses to help them make decisions about their future. 
+                        Personally performed public outreach to over 2000 people in a year.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
