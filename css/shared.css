@@ -1,101 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+
 * { 
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; 
+    padding: 0; 
+}
+
+@keyframes twinkle { 
+    0% {background-position: 0 0;}
+    100% {background-position: -10000px 5000;}
+}
+
+@keyframes slide {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+    
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+body { 
+    animation: slide 2s forwards;
+    transition: 5s;
 }
 
 html { 
+    background-color: black;
+    margin: 2em;
+}
+
+.stars, .twinkling { 
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    width: 100%;
+    height: 100%; 
+    display: block;
+}
+
+.stars { 
+    background: #000 url(../stars.png) repeat top center; 
+    z-index: 0;
+}
+
+.twinkling { 
+    transition: 1s;
+    background: transparent url(../twinkling.png) repeat top center;
+    z-index: 1;
+    animation: twinkle 25s infinite linear;
+    animation-direction: alternate-reverse;
+}
+
+.title h1 { 
+    font-size: 40px;
+    font-family: 'Rajdhani', sans-serif;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    transition: 1s;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,255,206,1) 0%, rgba(7,132,140,0.9855129551820728) 0%, rgba(167,195,217,1) 0%, rgba(255,0,0,0) 0%, rgba(164,0,255,0.49763655462184875) 50%, rgba(255,0,0,0) 100%);
+    
+    display: block;
     position: relative;
-    margin: 5%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    overflow-x: hidden; 
-    padding: 0px;
+    z-index: 3;
 }
 
-hr { 
-    background-color: blue
+.bio p { 
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    text-align: center;
+    color: white;
+    transition: 1s;
+
+    display: block;
+    position: relative;
+    z-index: 3;
 }
 
-.gray-hr { 
-    background-color: gray;
+.github-card { 
+    margin: auto;
+    margin-top: 2em;
+    border-radius: 10px;
+    border: 1px solid white;
+    width: 100%;
+    max-width: 375px;
+    height: 115px;
+    background-color: white;
+    animation-name: floating;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: 1s;
+
+    display: block;
+    position: relative;
+    z-index: 3;
 }
 
-header h4, body h5, body h6 { 
-    font-weight: bold;
+.github-card:hover { 
+    cursor: pointer;
 }
 
-header a { 
+.github-card div { 
+    float: left;
+    word-wrap: break-word;
+}
+#github-card-info { 
+    max-width: 250px;
+    width: 55%;
+}
+
+.github-card ul >li { 
+    display: inline-block;
+}
+
+.github-card img { 
     padding-right: 10px;
-    color: inherit;
+    height: 115px;
+    width: 115px;
+    border-radius: 10px;
 }
 
-header a:hover { 
-    text-decoration: none;
-    color: inherit;
+.github-card h4, .github-card h5, .github-card h6, .github-card li { 
+    font-family: 'Rajdhani', sans-serif;
+    color: black;
+    transition: 1s;
 }
 
-p { 
-    text-align: justify;
-}
-
-ul { 
+.github-card ul { 
     list-style: none;
 }
 
-img { 
-    filter: drop-shadow(0px 0px 2px gray);
-    image-resolution: 100dpi; 
-} 
-
-.project, .work { 
-    background-color: rgba(234, 234, 234, 0.231);
-    border-radius: 25px;
-    border-style: groove;
-    border-width: 2px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 10px;
-    filter: drop-shadow(0px 0px 5px lightgray);
+.github-card li { 
+    font-size: smaller;
 }
 
-.project div, .work div { 
-    margin: 10px;
+.contact { 
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    transition: 1s;
 }
 
-#projects img { 
-    padding-top: 5px;
-    padding-bottom: 5px;
+.contact p { 
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    text-align: center;
+    color: white;
+    transition: 1s;
+
+    display: block;
+    position: relative;
+    z-index: 3;
 }
 
-#linkedin, #email, #github { 
-    margin: 10px;
-    font-size: 40px;
+.contact a { 
+    font-size: 50px;
+    margin-top: .5em;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: fit-content;
+    transition: 1s;
+
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+}
+
+#linkedin, #email { 
+    color: white;
+    float: left;
+    animation-name: floating;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: 1s;
 }
 
 #linkedin { 
-    color: blue;
+    background-size: 10px 10px;
+    animation-delay: 2s
 }
 #email { 
-    color: red;
-}
-#github { 
-    color: black;
+    animation-delay: 4s;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-  
-.column {
-    flex: 33.3%;
-    max-width: 33.3%;
-    padding: 0 4px;
+@media all and (min-width: 800px) {
+    .title h1 { 
+        font-size: 50px;
+    }
+    .contact p, .bio p { 
+        font-size: 25px;
+    }
 }
 
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 95%;
+@media all and (min-width: 1500px) {
+    .title h1 { 
+        font-size: 75px;
+    }
+    .contact p, .bio p { 
+        font-size: 30px;
+    }
+    .github-card { 
+        height: 200px;
+        width: 750px;
+        max-width: none;
+    }
+    .github-card img{ 
+        width: 200px;
+        height: 200px;
+    }
+    .github-card h4, .github-card h5, .github-card h6, .github-card li { 
+        font-size: 175%;
+    }
+    #github-card-info { 
+        max-width: none;
+        width: 70%;
+    }
 }
-  
+
