@@ -30,7 +30,7 @@
 
 body { 
     animation: slide 3.5s forwards;
-    transition: 5s;
+    transition: 2s;
 }
 
 html { 
