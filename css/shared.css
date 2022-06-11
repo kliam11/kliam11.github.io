@@ -29,13 +29,13 @@
 }
 
 body { 
-    animation: slide 2s forwards;
+    animation: slide 3.5s forwards;
     transition: 5s;
 }
 
 html { 
     background-color: black;
-    margin: 2em;
+    margin: 2.5em;
 }
 
 .stars, .twinkling { 
@@ -50,14 +50,16 @@ html {
 }
 
 .stars { 
-    background: #000 url(../stars.png) repeat top center; 
+    background: #000 url(../img/stars.png) repeat top center; 
+    filter: brightness(2.00);
     z-index: 0;
 }
 
 .twinkling { 
     transition: 1s;
-    background: transparent url(../twinkling.png) repeat top center;
+    background: transparent url(../img/twinkling.png) repeat top center;
     z-index: 1;
+    filter: brightness(.5);
     animation: twinkle 25s infinite linear;
     animation-direction: alternate-reverse;
 }
@@ -65,13 +67,12 @@ html {
 .title h1 { 
     font-size: 40px;
     font-family: 'Rajdhani', sans-serif;
-    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px; 
     text-align: center;
     color: white;
     transition: 1s;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,255,206,1) 0%, rgba(7,132,140,0.9855129551820728) 0%, rgba(167,195,217,1) 0%, rgba(255,0,0,0) 0%, rgba(164,0,255,0.49763655462184875) 50%, rgba(255,0,0,0) 100%);
     
     display: block;
     position: relative;
@@ -199,7 +200,6 @@ html {
 }
 
 #linkedin { 
-    background-size: 10px 10px;
     animation-delay: 2s
 }
 #email { 
@@ -215,28 +215,12 @@ html {
     }
 }
 
-@media all and (min-width: 1500px) {
+@media all and (min-width: 1024px) {
     .title h1 { 
-        font-size: 75px;
+        font-size: 65px;
     }
     .contact p, .bio p { 
         font-size: 30px;
-    }
-    .github-card { 
-        height: 200px;
-        width: 750px;
-        max-width: none;
-    }
-    .github-card img{ 
-        width: 200px;
-        height: 200px;
-    }
-    .github-card h4, .github-card h5, .github-card h6, .github-card li { 
-        font-size: 175%;
-    }
-    #github-card-info { 
-        max-width: none;
-        width: 70%;
     }
 }
 
