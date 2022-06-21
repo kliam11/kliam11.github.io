@@ -29,7 +29,7 @@
 }
 
 html { 
-    background-color: black;
+    background-color: white;
     margin: 2.5em;
 }
 
@@ -44,24 +44,6 @@ html {
     display: block;
 }
 
-.stars { 
-    background: #000 url(../img/stars.png) repeat top center; 
-    filter: brightness(2.00);
-    z-index: 0;
-}
-
-.twinkling { 
-    transition: 1s;
-    background: transparent url(../img/twinkling.png) repeat top center;
-    z-index: 1;
-    filter: brightness(.5);
-    animation: twinkle 25s infinite linear;
-    animation-direction: alternate-reverse;
-    transform: translate3d(0);
-        backface-visibility: hidden;
-        perspective: 1000;
-}
-
 .title h1 { 
     font-size: 40px;
     font-family: 'Rajdhani', sans-serif;
@@ -69,7 +51,7 @@ html {
     margin-right: auto;
     margin-top: 20px; 
     text-align: center;
-    color: white;
+    color: black;
     transition: 1s;
     
     display: block;
@@ -85,7 +67,7 @@ html {
     margin-right: auto;
     width: 85%;
     text-align: center;
-    color: white;
+    color: black;
     transition: 1s;
 
     display: block;
@@ -97,11 +79,11 @@ html {
     margin: auto;
     margin-top: 2em;
     border-radius: 10px;
-    border: 1px solid white;
+    border: .5px solid black;
     width: 100%;
     max-width: 375px;
     height: 120px;
-    background-color: white;
+    background-color: rgb(60, 60, 255);
     animation-name: floating;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -142,7 +124,7 @@ html {
 
 .github-card h4, .github-card h5, .github-card h6, .github-card li { 
     font-family: 'Rajdhani', sans-serif;
-    color: black;
+    color: white;
     transition: 1s;
 }
 
@@ -173,7 +155,7 @@ html {
     margin-right: auto;
     width: 85%;
     text-align: center;
-    color: white;
+    color: black;
     transition: 1s;
 
     display: block;
@@ -195,7 +177,7 @@ html {
 }
 
 #linkedin, #email { 
-    color: white;
+    color: black;
     float: left;
     animation-name: floating;
     animation-duration: 10s;
