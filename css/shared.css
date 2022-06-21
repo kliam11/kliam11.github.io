@@ -58,8 +58,8 @@ body {
 }
 
 #menu, #close { 
-    top: 5px;
-    left: 5px;
+    top: 0;
+    left: 0;
     color: rgb(60, 120, 248);
     font-size: 35px;
     display: grid;
