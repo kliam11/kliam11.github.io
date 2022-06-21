@@ -5,20 +5,13 @@
     padding: 0; 
 }
 
-@keyframes twinkle { 
-    0% {background-position: 0 0;}
-    100% {background-position: -10000px 5000;}
-}
-
-@keyframes slide {
+@keyframes fade-in {
     from {
-        margin-left: 100%;
-        width: 100%;
+        opacity: 0;
     }
     
     to {
-        margin-left: 0%;
-        width: 100%;
+        opacity: 1;
     }
 }
 
@@ -28,20 +21,53 @@
     100%   { transform: translate(0, -0px); }   
 }
 
+@keyframes spin-fade-out{ 
+    from { 
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to { 
+        transform: rotate(360deg);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes spin-fade-in{ 
+    from { 
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    to { 
+        transform: rotate(360deg);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 html { 
     background-color: white;
     margin: 2.5em;
 }
 
-.stars, .twinkling { 
+body { 
+    animation: fade-in 3.5s forwards;
+    transition: 2s;
+    transform: translate3d(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+}
+
+#menu, #close { 
+    top: 2.5%;
+    left: 2.5%;
+    color: rgb(60, 120, 248);
+    font-size: 35px;
+    display: grid;
     position: absolute;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    width: 100%;
-    height: 100%; 
-    display: block;
+}
+
+#menu:hover, #close:hover { 
+    cursor: pointer;
 }
 
 .title h1 { 
@@ -53,10 +79,6 @@ html {
     text-align: center;
     color: black;
     transition: 1s;
-    
-    display: block;
-    position: relative;
-    z-index: 3;
 }
 
 .bio p { 
@@ -65,37 +87,29 @@ html {
     margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
-    width: 85%;
+    width: 100%;
     text-align: center;
     color: black;
     transition: 1s;
-
-    display: block;
-    position: relative;
-    z-index: 3;
 }
 
 .github-card { 
-    margin: auto;
+    margin:0 auto;
     margin-top: 2em;
     border-radius: 10px;
     border: .75px solid black;
     width: 100%;
     max-width: 375px;
     height: 120px;
-    background-color: rgb(60, 60, 255);
+    background-color: rgb(60, 120, 248);
     animation-name: floating;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     transition: 1s;
     transform: translate3d(0);
-        backface-visibility: hidden;
-        perspective: 1000;
-
-    display: block;
-    position: relative;
-    z-index: 3;
+    backface-visibility: hidden;
+    perspective: 1000;
 }
 
 .github-card:hover { 
@@ -108,7 +122,7 @@ html {
 }
 #github-card-info { 
     max-width: 250px;
-    width: 55%;
+    width: 53%;
 }
 
 .github-card ul >li { 
@@ -126,6 +140,7 @@ html {
     font-family: 'Rajdhani', sans-serif;
     color: white;
     transition: 1s;
+    overflow: hidden;
 }
 
 .github-card ul { 
@@ -143,8 +158,8 @@ html {
     text-align: center;
     transition: 1s;
     transform: translate3d(0);
-        backface-visibility: hidden;
-        perspective: 1000;
+    backface-visibility: hidden;
+    perspective: 1000;
 }
 
 .contact p { 
@@ -157,10 +172,6 @@ html {
     text-align: center;
     color: black;
     transition: 1s;
-
-    display: block;
-    position: relative;
-    z-index: 3;
 }
 
 .contact a { 
@@ -173,7 +184,6 @@ html {
 
     display: inline-block;
     position: relative;
-    z-index: 3;
 }
 
 #linkedin, #email { 
@@ -194,13 +204,6 @@ html {
 }
 
 @media all and (min-width: 800px) {
-    body { 
-        animation: slide 3.5s forwards;
-        transition: 2s;
-        transform: translate3d(0);
-        backface-visibility: hidden;
-        perspective: 1000;
-    }
     .title h1 { 
         font-size: 50px;
     }
@@ -218,3 +221,12 @@ html {
     }
 }
 
+.spin-out { 
+    animation: spin-fade-out 1s forwards;
+    transform: translate3d(0);
+}
+
+.spin-in { 
+    animation: spin-fade-in 1s forwards;
+    transform: translate3d(0);
+}

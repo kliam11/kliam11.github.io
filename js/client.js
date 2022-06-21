@@ -2,6 +2,8 @@ var xhttp;
 
 window.onload = function(){
     getGitHub(); 
+    initElems(); 
+    document.getElementById("close").style.visibility = "hidden"; 
 }; 
 
 function getGitHub() {
@@ -37,4 +39,23 @@ function gotoGitHubUser(e){
     window.location.href = 'https://github.com/kliam11'; 
 }
 
+function initElems(){ 
+    document.getElementById("menu").addEventListener("click", showMenu); 
+    document.getElementById("close").addEventListener("click", closeMenu); 
+}
+
+function showMenu(e){ 
+    if(document.getElementById("close").style.visibility == "hidden") document.getElementById("close").style.visibility = null; 
+    document.getElementById("menu").classList.add("spin-out");
+    document.getElementById("menu").classList.remove("spin-in");  
+    document.getElementById("close").classList.add("spin-in"); 
+    document.getElementById("close").classList.remove("spin-out"); 
+}
+
+function closeMenu(e){ 
+    document.getElementById("menu").classList.add("spin-in");
+    document.getElementById("menu").classList.remove("spin-out");  
+    document.getElementById("close").classList.add("spin-out"); 
+    document.getElementById("close").classList.remove("spin-in"); 
+}
 
