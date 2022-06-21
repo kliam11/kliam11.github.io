@@ -58,6 +58,8 @@ html {
     animation: twinkle 25s infinite linear;
     animation-direction: alternate-reverse;
     transform: translate3d(0);
+        backface-visibility: hidden;
+        perspective: 1000;
 }
 
 .title h1 { 
@@ -106,6 +108,8 @@ html {
     animation-timing-function: ease-in-out;
     transition: 1s;
     transform: translate3d(0);
+        backface-visibility: hidden;
+        perspective: 1000;
 
     display: block;
     position: relative;
@@ -157,6 +161,8 @@ html {
     text-align: center;
     transition: 1s;
     transform: translate3d(0);
+        backface-visibility: hidden;
+        perspective: 1000;
 }
 
 .contact p { 
@@ -210,6 +216,8 @@ html {
         animation: slide 3.5s forwards;
         transition: 2s;
         transform: translate3d(0);
+        backface-visibility: hidden;
+        perspective: 1000;
     }
     .title h1 { 
         font-size: 50px;
