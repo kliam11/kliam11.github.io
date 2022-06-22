@@ -311,10 +311,12 @@ body {
 .fade-in { 
     animation: fade-in-menu 1s forwards;
     transform: translate3d(0);
+    will-change: fade-in-menu; 
 }
 .fade-out { 
     animation: fade-out-menu 1s forwards;
     transform: translate3d(0);
+    will-change: fade-out-menu; 
 }
 
 .current { 
