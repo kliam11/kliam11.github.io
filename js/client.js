@@ -4,6 +4,7 @@ window.onload = function(){
     getGitHub(); 
     initElems(); 
     document.getElementById("close").style.visibility = "hidden"; 
+    document.getElementsByClassName("dropdown-menu")[0].style.visibility = "hidden"; 
 }; 
 
 function getGitHub() {
@@ -46,10 +47,14 @@ function initElems(){
 
 function showMenu(e){ 
     if(document.getElementById("close").style.visibility == "hidden") document.getElementById("close").style.visibility = null; 
+    if(document.getElementsByClassName("dropdown-menu")[0].style.visibility == "hidden") document.getElementsByClassName("dropdown-menu")[0].style.visibility = null;
     document.getElementById("menu").classList.add("spin-out");
     document.getElementById("menu").classList.remove("spin-in");  
     document.getElementById("close").classList.add("spin-in"); 
     document.getElementById("close").classList.remove("spin-out"); 
+
+    document.getElementsByClassName("dropdown-menu")[0].classList.remove("fade-out")
+    document.getElementsByClassName("dropdown-menu")[0].classList.add("fade-in")
 }
 
 function closeMenu(e){ 
@@ -57,5 +62,8 @@ function closeMenu(e){
     document.getElementById("menu").classList.remove("spin-out");  
     document.getElementById("close").classList.add("spin-out"); 
     document.getElementById("close").classList.remove("spin-in"); 
+
+    document.getElementsByClassName("dropdown-menu")[0].classList.remove("fade-in")
+    document.getElementsByClassName("dropdown-menu")[0].classList.add("fade-out")
 }
 

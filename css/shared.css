@@ -3,6 +3,7 @@
 * { 
     margin: 0; 
     padding: 0; 
+    font-family: 'Rajdhani', sans-serif;
 }
 
 @keyframes fade-in {
@@ -12,6 +13,17 @@
     
     to {
         opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
@@ -50,7 +62,7 @@ html {
 }
 
 body { 
-    animation: fade-in 3.5s forwards;
+    animation: fade-in 5s forwards;
     transition: 2s;
     transform: translate3d(0);
     backface-visibility: hidden;
@@ -70,9 +82,28 @@ body {
     cursor: pointer;
 }
 
+.dropdown-menu { 
+    width: 25%;
+    top: 5px;
+    left: 45px;
+    position: absolute;
+}
+.dropdown-menu ul { 
+    list-style: none;
+    width: 100%;
+}
+.dropdown-menu li { 
+    padding-left: 10px;
+    width: 100%;
+}
+.dropdown-menu li:hover { 
+    cursor: pointer;
+    color: blue;
+}
+
 .title h1 { 
     font-size: 40px;
-    font-family: 'Rajdhani', sans-serif;
+    
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px; 
@@ -82,7 +113,7 @@ body {
 }
 
 .bio p { 
-    font-family: 'Rajdhani', sans-serif;
+    
     font-size: 20px;
     margin-top: 2em;
     margin-left: auto;
@@ -137,14 +168,25 @@ body {
 }
 
 .github-card h4, .github-card h5, .github-card h6, .github-card li { 
-    font-family: 'Rajdhani', sans-serif;
+
     color: white;
     transition: 1s;
     overflow: hidden;
 }
 
+.github-card h5 { 
+    text-decoration: underline;
+}
+
+.github-card h6 { 
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 2px;
+}
+
 .github-card ul { 
     list-style: none;
+    margin-bottom: 4px;
 }
 
 .github-card li { 
@@ -163,7 +205,7 @@ body {
 }
 
 .contact p { 
-    font-family: 'Rajdhani', sans-serif;
+    
     font-size: 20px;
     margin-top: 2em;
     margin-left: auto;
@@ -214,14 +256,18 @@ body {
         top: 2.5%;
         left: 2.5%;
     }
+    .dropdown-menu { 
+        top: 25px;
+        left: 75px;
+    }
 }
 
 @media all and (min-width: 1024px) {
     .title h1 { 
-        font-size: 65px;
+        font-size: 55px;
     }
     .contact p, .bio p { 
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
@@ -232,5 +278,14 @@ body {
 
 .spin-in { 
     animation: spin-fade-in 1s forwards;
+    transform: translate3d(0);
+}
+
+.fade-in { 
+    animation: fade-in 1s forwards;
+    transform: translate3d(0);
+}
+.fade-out { 
+    animation: fade-out 1s forwards;
     transform: translate3d(0);
 }
