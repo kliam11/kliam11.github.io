@@ -98,7 +98,7 @@ body {
     top: 0;
     left: 0;
     color: rgb(60, 120, 248);
-    font-size: 35px;
+    font-size: 45px;
     position: absolute;
     transition: 1s;
 }
@@ -108,7 +108,7 @@ body {
 }
 
 .dropdown-menu { 
-    width: 30%;
+    width: 45%;
     margin-top: -35px;
     padding-left: 40px;
     margin-bottom: 10px;
@@ -283,6 +283,7 @@ body {
         left: 2.5%;
     }
     .dropdown-menu { 
+        width: 30%;
         margin-top: -20px;
         margin-left: 30px;
     }
