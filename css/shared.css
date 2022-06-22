@@ -6,7 +6,28 @@
     font-family: 'Rajdhani', sans-serif;
 }
 
-@keyframes fade-in {
+@keyframes fade-in-body {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes fade-out-body {
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fade-in-menu {
     from {
         opacity: 0;
         padding-bottom: 0;
@@ -15,13 +36,13 @@
     to {
         opacity: 1;
         visibility: visible;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
 }
-@keyframes fade-out {
+@keyframes fade-out-menu {
     from {
         opacity: 1;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
     
     to {
@@ -66,7 +87,7 @@ html {
 }
 
 body { 
-    animation: fade-in 5s forwards;
+    animation: fade-in-body 5s forwards;
     transition: 2s;
     transform: translate3d(0);
     backface-visibility: hidden;
@@ -89,9 +110,10 @@ body {
 
 .dropdown-menu { 
     width: 25%;
-    top: 5px;
-    left: 45px;
-    position: absolute;
+    margin-top: -35px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    position: relative;
 }
 .dropdown-menu ul { 
     list-style: none;
@@ -111,7 +133,7 @@ body {
     font-size: 40px; 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px; 
+    margin-top: -75px; 
     text-align: center;
     color: black;
     transition: 1s;
@@ -262,8 +284,8 @@ body {
         left: 2.5%;
     }
     .dropdown-menu { 
-        top: 25px;
-        left: 75px;
+        margin-top: -20px;
+        margin-left: 30px;
     }
 }
 
@@ -287,11 +309,11 @@ body {
 }
 
 .fade-in { 
-    animation: fade-in 1s forwards;
+    animation: fade-in-menu 1s forwards;
     transform: translate3d(0);
 }
 .fade-out { 
-    animation: fade-out 1s forwards;
+    animation: fade-out-menu 1s forwards;
     transform: translate3d(0);
 }
 
