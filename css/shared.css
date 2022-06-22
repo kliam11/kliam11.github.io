@@ -36,13 +36,13 @@
     to {
         opacity: 1;
         visibility: visible;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
     }
 }
 @keyframes fade-out-menu {
     from {
         opacity: 1;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
     }
     
     to {
