@@ -9,21 +9,25 @@
 @keyframes fade-in {
     from {
         opacity: 0;
+        padding-bottom: 0;
     }
     
     to {
         opacity: 1;
         visibility: visible;
+        padding-bottom: 50px;
     }
 }
 @keyframes fade-out {
     from {
         opacity: 1;
+        padding-bottom: 50px;
     }
     
     to {
         opacity: 0;
         visibility: hidden;
+        padding-bottom: 0;
     }
 }
 
@@ -76,6 +80,7 @@ body {
     font-size: 35px;
     display: grid;
     position: absolute;
+    transition: 1s;
 }
 
 #menu:hover, #close:hover { 
@@ -95,18 +100,18 @@ body {
 .dropdown-menu li { 
     padding-left: 10px;
     width: 100%;
+    font-size: x-large;
 }
 .dropdown-menu li:hover { 
     cursor: pointer;
-    color: blue;
+    color: rgb(60, 120, 248);
 }
 
 .title h1 { 
-    font-size: 40px;
-    
+    font-size: 40px; 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px; 
+    margin-top: 20px; 
     text-align: center;
     color: black;
     transition: 1s;
@@ -219,8 +224,8 @@ body {
 .contact a { 
     font-size: 50px;
     margin-top: .5em;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
     width: fit-content;
     transition: 1s;
 
@@ -267,7 +272,7 @@ body {
         font-size: 55px;
     }
     .contact p, .bio p { 
-        font-size: 25px;
+        font-size: 30px;
     }
 }
 
@@ -288,4 +293,8 @@ body {
 .fade-out { 
     animation: fade-out 1s forwards;
     transform: translate3d(0);
+}
+
+.current { 
+    color: rgb(60, 120, 248);
 }

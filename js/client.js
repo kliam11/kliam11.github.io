@@ -3,8 +3,7 @@ var xhttp;
 window.onload = function(){
     getGitHub(); 
     initElems(); 
-    document.getElementById("close").style.visibility = "hidden"; 
-    document.getElementsByClassName("dropdown-menu")[0].style.visibility = "hidden"; 
+    document.getElementsByTagName("li")[0].classList.add("current"); 
 }; 
 
 function getGitHub() {
