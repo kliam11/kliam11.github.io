@@ -114,12 +114,10 @@ body {
     margin-bottom: 10px;
     position: relative;
     transition: 1s;
-    background-color: red;
 }
 .dropdown-menu ul { 
     list-style: none;
     width: 100%;
-    background-color: gray;
 }
 .dropdown-menu li { 
     width: 100%;
