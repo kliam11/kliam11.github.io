@@ -110,14 +110,16 @@ body {
 .dropdown-menu { 
     width: 45%;
     margin-top: -35px;
-    padding-left: 55px;
+    margin-left: 55px;
     margin-bottom: 10px;
     position: relative;
     transition: 1s;
+    background-color: red;
 }
 .dropdown-menu ul { 
     list-style: none;
     width: 100%;
+    background-color: gray;
 }
 .dropdown-menu li { 
     width: 100%;
