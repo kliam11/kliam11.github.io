@@ -87,7 +87,6 @@ body {
     top: 5px;
     left: 45px;
     position: absolute;
-    margin-bottom: 20px;
 }
 .dropdown-menu ul { 
     list-style: none;
@@ -107,7 +106,7 @@ body {
     
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px; 
+    margin-top: 25px; 
     text-align: center;
     color: black;
     transition: 1s;
