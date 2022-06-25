@@ -149,7 +149,8 @@ body{
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    width: 90vw;
+    width: 325px;
+    transition: 1s;
 }
 
 .title h1 { 
@@ -179,11 +180,17 @@ body{
         margin-top: -20px;
         margin-left: 45px;
     }
+    .page { 
+        width: 750px
+    }
 }
 
 @media all and (min-width: 1024px) {
     .title h1 { 
         font-size: 55px;
+    }
+    .page { 
+        width: 1000px
     }
 }
 
