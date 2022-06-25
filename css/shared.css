@@ -104,8 +104,6 @@ body {
     animation: fade-in-body 3.5s forwards;
     transition: 2s;
     transform: translate3d(0);
-    backface-visibility: hidden;
-    perspective: 1000;
 }
 
 #menu, #close { 
@@ -141,16 +139,16 @@ body {
     cursor: pointer;
     color: rgb(60, 120, 248);
 }
-
+/*
 .page { 
-    position: fixed; 
+    position: absolute; 
     margin-left: auto; 
     margin-right: auto; 
     left: 0;
     right: 0;
-    width: 90%;
+    width: 340px;
     transition: 1s;
-}
+}*/
 
 .title h1 { 
     font-size: 40px; 
@@ -177,18 +175,18 @@ body {
         margin-top: -20px;
         margin-left: 45px;
     }
-    .page { 
+    /*.page { 
         width: 750px
-    }
+    }*/
 }
 
 @media all and (min-width: 1024px) {
     .title h1 { 
         font-size: 55px;
     }
-    .page { 
+    /*.page { 
         width: 1000px
-    }
+    }*/
 }
 
 
