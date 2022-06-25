@@ -1,0 +1,145 @@
+.bio p {  
+    font-size: 20px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    color: black;
+    transition: 1s;
+}
+
+.github-card { 
+    margin:0 auto;
+    margin-top: 1.5em;
+    border-radius: 10px;
+    border: .75px solid black;
+    width: 100%;
+    max-width: 375px;
+    height: 120px;
+    background-color: rgb(60, 120, 248);
+    animation-name: floating;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: 1s;
+    transform: translate3d(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+}
+
+.github-card:hover { 
+    cursor: pointer;
+}
+
+.github-card div { 
+    float: left;
+    word-wrap: break-word;
+}
+#github-card-info { 
+    max-width: 250px;
+    width: 53%;
+}
+
+.github-card ul >li { 
+    display: inline-block;
+}
+
+.github-card img { 
+    padding-right: 10px;
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.github-card h4, .github-card h5, .github-card h6, .github-card li { 
+    color: white;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.github-card h5 { 
+    text-decoration: underline;
+}
+
+.github-card h6 { 
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 2px;
+}
+
+.github-card ul { 
+    list-style: none;
+    margin-bottom: 4px;
+}
+
+.github-card li { 
+    font-size: smaller;
+}
+
+.contact { 
+    margin: auto;
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+    transition: 1s;
+    transform: translate3d(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+}
+
+.contact p { 
+    font-size: 20px;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    text-align: center;
+    color: black;
+    transition: 1s;
+}
+
+.contact a { 
+    font-size: 50px;
+    margin-top: .5em;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: fit-content;
+    transition: 1s;
+
+    display: inline-block;
+    position: relative;
+}
+
+#linkedin, #email { 
+    color: black;
+    float: left;
+    animation-name: floating;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: 1s;
+}
+
+#linkedin { 
+    animation-delay: 2s
+}
+#email { 
+    animation-delay: 4s;
+}
+
+@media all and (min-width: 800px) {
+    .contact p, .bio p { 
+        font-size: 25px;
+    }
+    .github-card { 
+        margin-top: 3em;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .contact p, .bio p { 
+        font-size: 30px;
+    }
+}
+

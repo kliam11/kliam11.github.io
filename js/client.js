@@ -1,9 +1,10 @@
 var xhttp; 
 
+var curr = "main"; 
+
 window.onload = function(){
     getGitHub(); 
     initElems(); 
-    document.getElementsByTagName("li")[0].classList.add("current"); 
 }; 
 
 function getGitHub() {
@@ -42,6 +43,9 @@ function gotoGitHubUser(e){
 function initElems(){ 
     document.getElementById("menu").addEventListener("click", showMenu); 
     document.getElementById("close").addEventListener("click", closeMenu); 
+    for(menuItem of document.getElementsByTagName("li")){ 
+        menuItem.addEventListener("click", goto); 
+    }
 }
 
 function showMenu(e){ 
@@ -52,8 +56,8 @@ function showMenu(e){
     document.getElementById("close").classList.add("spin-in"); 
     document.getElementById("close").classList.remove("spin-out"); 
 
-    document.getElementsByClassName("dropdown-menu")[0].classList.remove("fade-out")
-    document.getElementsByClassName("dropdown-menu")[0].classList.add("fade-in")
+    document.getElementsByClassName("dropdown-menu")[0].classList.remove("fade-out-menu")
+    document.getElementsByClassName("dropdown-menu")[0].classList.add("fade-in-menu")
 }
 
 function closeMenu(e){ 
@@ -62,7 +66,25 @@ function closeMenu(e){
     document.getElementById("close").classList.add("spin-out"); 
     document.getElementById("close").classList.remove("spin-in"); 
 
-    document.getElementsByClassName("dropdown-menu")[0].classList.remove("fade-in")
-    document.getElementsByClassName("dropdown-menu")[0].classList.add("fade-out")
+    document.getElementsByClassName("dropdown-menu")[0].classList.remove("fade-in-menu")
+    document.getElementsByClassName("dropdown-menu")[0].classList.add("fade-out-menu")
+}
+
+function goto(e){ 
+    if(curr===e.target.id) return; 
+    
+    // Fade in new page, fade out prev page 
+    document.getElementsByClassName(curr)[0].classList.remove("fade-in-page"); 
+    document.getElementsByClassName(e.target.id)[0].classList.remove("fade-out-page"); 
+    document.getElementsByClassName(curr)[0].classList.add("fade-out-page"); 
+    document.getElementsByClassName(e.target.id)[0].classList.add("fade-in-page"); 
+
+    // Show current menu link chosen 
+    document.getElementById(e.target.id).classList.add("current"); 
+    document.getElementById(curr).classList.remove("current"); 
+    
+    curr=e.target.id;
+
+    closeMenu(null); 
 }
 
