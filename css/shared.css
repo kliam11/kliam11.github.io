@@ -99,7 +99,6 @@ html {
 }
 
 body { 
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
     animation: fade-in-body 3.5s forwards;
