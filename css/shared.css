@@ -6,10 +6,6 @@
     font-family: 'Rajdhani', sans-serif;
 }
 
-a { 
-    text-decoration: underline;
-}
-
 
 /* ANIMATIONS */ 
 
@@ -93,12 +89,19 @@ a {
 
 /* ALL PAGES */ 
 
+a { 
+    text-decoration: underline;
+}
+
 html { 
     background-color: white;
     margin: 2.5em;
 }
 
 body{ 
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     animation: fade-in-body 3.5s forwards;
     transition: 2s;
     transform: translate3d(0);
