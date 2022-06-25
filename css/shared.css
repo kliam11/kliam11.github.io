@@ -98,7 +98,7 @@ html {
     margin: 2.5em;
 }
 
-body{ 
+body { 
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -145,18 +145,16 @@ body{
 
 .page { 
     position: absolute; 
-    left: 0; 
-    right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    width: 325px;
+    left: 0;
+    right: 0;
+    width: 340px;
     transition: 1s;
 }
 
 .title h1 { 
     font-size: 40px; 
-    margin-left: auto;
-    margin-right: auto;
     margin-top: -75px; 
     text-align: center;
     color: black;
