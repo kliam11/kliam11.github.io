@@ -99,11 +99,16 @@ html {
 }
 
 body { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     animation: fade-in-body 3.5s forwards;
     transition: 2s;
     transform: translate3d(0);
+    backface-visibility: hidden;
+    perspective: 1000;
 }
 
 #menu, #close { 
@@ -141,7 +146,7 @@ body {
 }
 /*
 .page { 
-    position: absolute; 
+    position: relative; 
     margin-left: auto; 
     margin-right: auto; 
     left: 0;
