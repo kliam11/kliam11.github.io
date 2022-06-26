@@ -128,8 +128,8 @@ body {
     width: 75%;
     margin-top: -35px;
     margin-left: 55px;
-    margin-bottom: 10px;
-    position: relative;
+    position: flex;
+    z-index: 3;
     transition: 1s;
 }
 .dropdown-menu ul { 
@@ -144,20 +144,20 @@ body {
     cursor: pointer;
     color: rgb(60, 120, 248);
 }
-/*
+
 .page { 
-    position: relative; 
+    position: absolute; 
     margin-left: auto; 
     margin-right: auto; 
     left: 0;
     right: 0;
-    width: 340px;
+    width: 90%;
     transition: 1s;
-}*/
+}
 
 .title h1 { 
     font-size: 40px; 
-    margin-top: -75px; 
+    margin-top: 20px; 
     text-align: center;
     color: black;
     transition: 1s;
