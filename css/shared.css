@@ -147,15 +147,14 @@ body {
     position: absolute; 
     margin-left: auto; 
     margin-right: auto; 
-    margin-top: 10px;
     left: 0;
     right: 0;
-    width: 95%;
+    width: 90%;
     transition: 1s;
 }
 
 .title h1 { 
-    font-size: 40px; 
+    font-size: 35px; 
     margin-top: 20px; 
     text-align: center;
     color: black;
@@ -168,7 +167,7 @@ body {
 
 @media all and (min-width: 800px) {
     .title h1 { 
-        font-size: 50px;
+        font-size: 40px;
     }
     #menu, #close { 
         top: 2.5%;
@@ -186,7 +185,7 @@ body {
 
 @media all and (min-width: 1024px) {
     .title h1 { 
-        font-size: 55px;
+        font-size: 45px;
     }
     /*.page { 
         width: 1000px
