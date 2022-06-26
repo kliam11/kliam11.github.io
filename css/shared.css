@@ -107,8 +107,6 @@ body {
     animation: fade-in-body 3.5s forwards;
     transition: 2s;
     transform: translate3d(0);
-    backface-visibility: hidden;
-    perspective: 1000;
 }
 
 #menu, #close { 
@@ -149,9 +147,10 @@ body {
     position: absolute; 
     margin-left: auto; 
     margin-right: auto; 
+    margin-top: 10px;
     left: 0;
     right: 0;
-    width: 90%;
+    width: 95%;
     transition: 1s;
 }
 
