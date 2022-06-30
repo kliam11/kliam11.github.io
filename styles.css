@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap');
+
+/* Animations */ 
+
+@keyframes typingEffect {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes typingCursor { 
+    from, to {border-color: transparent;}
+    50% {border-color: black;}
+}
+
+@keyframes zoomIn { 
+    from {transform: scale(0.1,0.1);}
+    to {transform: scale(1,1);}
+}
+
+@keyframes spin { 
+    from {transform: rotate(0deg);}
+    to {transform: rotate(720deg);}
+}
+
+* { 
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    transition: 1s;
+}
+
+html, body { 
+    height: 100%;
+    width: 100%;
+    background: rgb(227,255,231);
+    background: linear-gradient(90deg, rgba(227,255,231,1) 0%, rgba(227,241,255,1) 100%);
+}
+
+.container { 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.info { 
+    text-align: center;
+    width: 70%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    animation: zoomIn 1s;
+}
+.title { 
+    margin:0 auto;
+    width: fit-content;
+}
+
+.title h1 { 
+    font-size: 3.5vw;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typingEffect 3s steps(40, end), 
+        typingCursor .75s step-end infinite;
+}
+
+.info p { 
+    font-size: 1.35vw;
+    margin: 10px;
+}
+
+.contact { 
+    display: inline-flex;
+}
+
+.contact i { 
+    font-size: 3.5vw;
+    color: black;
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.contact i:hover { 
+    animation: spin 1s;
+}
+
+/* Mobile adjustments */ 
+
+@media all and (max-width: 750px) {
+    .info h1 { 
+        font-size: x-large;
+    }
+
+    .info p { 
+        font-size: small;
+    }
+
+    .contact i { 
+        font-size: 40px;
+    }
+}
+
+
