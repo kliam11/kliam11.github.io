@@ -44,7 +44,7 @@ html, body {
 
 .info { 
     text-align: center;
-    width: 70%;
+    width: 75%;
     background-color: white;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -91,7 +91,7 @@ html, body {
 
 /* Mobile adjustments */ 
 
-@media all and (max-width: 850px) {
+@media all and (max-width: 900px) {
     .info h1 { 
         font-size: x-large;
     }
