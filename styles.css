@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap');
 
 /* Animations */ 
 
@@ -24,7 +23,7 @@
 
 * { 
     margin: 0;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Courier New', monospace;
     transition: 1s;
 }
 
@@ -58,6 +57,7 @@ html, body {
 
 .title h1 { 
     font-size: 3.5vw;
+    font-weight: lighter;
     overflow: hidden;
     border-right: .15em solid black;
     white-space: nowrap;
@@ -91,7 +91,7 @@ html, body {
 
 /* Mobile adjustments */ 
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 850px) {
     .info h1 { 
         font-size: x-large;
     }
