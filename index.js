@@ -19,12 +19,15 @@ function processMsg() {
     if (xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200) { 
         console.log("SUCCESS: msg sent.")
         //alert("Thanks for wishing Shan a Happy Birthday!")
-        document.getElementById('submit-btn').disabled = true; 
+        document.getElementById('submit-btn').classList.add('btn-success'); 
+        document.getElementById('submit-btn').classList.remove('btn-primary'); 
         document.getElementById('msg-info').innerHTML = "Thanks so much!"; 
     }
     else if (xhttp.status === 500) { 
         console.log("ERROR: could not send msg.")
         //alert(xhttp.status + ": An error occured, try again later.")
+        document.getElementById('submit-btn').classList.add('btn-danger'); 
+        document.getElementById('submit-btn').classList.remove('btn-primary'); 
         document.getElementById('msg-info').innerHTML = "And error occurred... try again later?"; 
     }
     else { 
