@@ -18,12 +18,14 @@ function sendMsg() {
 function processMsg() { 
     if (xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200) { 
         console.log("SUCCESS: msg sent.")
-        alert("Thanks for wishing Shan a Happy Birthday!")
+        //alert("Thanks for wishing Shan a Happy Birthday!")
         document.getElementById('submit-btn').disabled = true; 
+        document.getElementById('msg-info').innerHTML = "Thanks so much!"; 
     }
     else if (xhttp.status === 500) { 
         console.log("ERROR: could not send msg.")
-        alert(xhttp.status + ": An error occured, try again later.")
+        //alert(xhttp.status + ": An error occured, try again later.")
+        document.getElementById('msg-info').innerHTML = "And error occurred... try again later?"; 
     }
     else { 
         console.log("ERROR: something else went wrong...")
