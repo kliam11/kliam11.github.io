@@ -19,18 +19,22 @@ function processMsg() {
     if (xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200) { 
         console.log("SUCCESS: msg sent.")
         //alert("Thanks for wishing Shan a Happy Birthday!")
-        document.getElementById('submit-btn').classList.add('btn-success'); 
-        document.getElementById('submit-btn').classList.remove('btn-primary'); 
-        document.getElementById('msg-info').innerHTML = "Thanks so much!"; 
+        document.getElementById('submit-btn').removeEventListener("click", sendMsg); 
+        document.getElementById('msg-info').value = "Thanks so much!"; 
     }
-    else if (xhttp.status === 500 || xhttp.status === 503) { 
+    /* else if (xhttp.status === 500 || xhttp.status === 503) { 
         console.log("ERROR: could not send msg.")
         //alert(xhttp.status + ": An error occured, try again later.")
-        document.getElementById('submit-btn').classList.add('btn-danger'); 
-        document.getElementById('submit-btn').classList.remove('btn-primary'); 
-        document.getElementById('msg-info').innerHTML = "And error occurred... try again later?"; 
+        document.getElementById('msg-info').value = xhttp.status+": an error occurred... try again later?"; 
     }
+    else if (xhttp.status === 429) { 
+        console.log("ERROR: too may reqs.")
+        //alert(xhttp.status + ": An error occured, try again later.")
+        document.getElementById('msg-info').value = xhttp.status+": stop hitting the button so much."; 
+    }*/ 
     else { 
-        console.log("ERROR: something else went wrong...")
+        console.log("ERROR: something else went wrong..."); 
+        document.getElementById('submit-btn').removeEventListener("click", sendMsg); 
+        document.getElementById('msg-info').value = "Thanks so much!"; 
     }
 }
