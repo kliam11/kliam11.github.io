@@ -3,41 +3,50 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Liam Kelly</title>
+        <title>kliam11.github.io</title>
+
+        <link rel="stylesheet" href="node_modules/@xterm/xterm/css/xterm.css" />
+        <script src="node_modules/@xterm/xterm/lib/xterm.js"></script>
+        
         <style>
             body {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                margin: 0;
-                font-family: 'Trebuchet MS', sans-serif;
-                font-size: large;
+                background-color: #02020b;
+                color: white;
+                margin: 1%;
             }
-            .content {
-                text-align: center;
+            mark {
+                background-color: lightgray;
             }
-            .link-container {
-                text-align: right;
+            a {
+                color: #00ffff;
             }
-            .link-container a {
-                display: block;
-                margin-bottom: 10px;
-                text-decoration: underline;
-                color: blue;
+            a:visited {
+                color: #00ffff;
             }
-            .link-container a:visited {
-                color: blue;
+            warn {
+                color: darkred;
             }
         </style>
     </head>
     <body>
-        <div class="content">
-            <h1>Liam Kelly</h1>
-            <div class="link-container">
-                <a href="https://linkedin.com/in/liamakelly">LinkedIn</a>
-                <a href="https://github.com/kliam11">GitHub</a>
-            </div>
+        <div id="intro">
+            <pre>
+ ___       ___  ________  _____ ______           ___  __    _______   ___       ___           ___    ___ 
+|\  \     |\  \|\   __  \|\   _ \  _   \        |\  \|\  \ |\  ___ \ |\  \     |\  \         |\  \  /  /|
+\ \  \    \ \  \ \  \|\  \ \  \\\__\ \  \       \ \  \/  /|\ \   __/|\ \  \    \ \  \        \ \  \/  / /
+ \ \  \    \ \  \ \   __  \ \  \\|__| \  \       \ \   ___  \ \  \_|/_\ \  \    \ \  \        \ \    / / 
+  \ \  \____\ \  \ \  \ \  \ \  \    \ \  \       \ \  \\ \  \ \  \_|\ \ \  \____\ \  \____    \/  /  /  
+   \ \_______\ \__\ \__\ \__\ \__\    \ \__\       \ \__\\ \__\ \_______\ \_______\ \_______\__/  / /    
+    \|_______|\|__|\|__|\|__|\|__|     \|__|        \|__| \|__|\|_______|\|_______|\|_______|\___/ /     
+                                                                                            \|___|/      
+                                                                                                                                                                                                   
+Welcome to my personal site! To see a list of available commands and their function, type <mark>man</mark> to see manual.
+View my GitHub page (<a href="https://github.com/kliam11" target="_blank">https://github.com/kliam11</a>). Or say hi on LinkedIn (<a href="https://www.linkedin.com/in/liamakelly/" target="_blank">https://www.linkedin.com/in/liamakelly/</a>).
+
+<warn>**This site is best viewed on a laptop or PC**</warn>
+            </pre>
         </div>
+        <div id="terminal-container"></div>
+        <script src="./src/term.js"></script>
     </body>
 </html>
