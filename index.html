@@ -1,113 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>kliam11.github.io</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam Kelly</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="text-center">
+        <h1>hello world.</h1>
+        <p>
+            I'm liam, a full-stack developer with a passion for creating efficient and scalable web applications. 
+            i enjoy solving complex problems and bringing ideas to life.
+        </p>
+    </div>
+    
+    <footer>
+        <a href="https://github.com/kliam11" target="_blank">github</a>
+        <a href="https://linkedin.com/in/liamakelly" target="_blank">linkedin</a>
+    </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.min.css" rel="stylesheet">
-        
-        <style>
-            body {
-                background-color: #02020b;
-                color: white;
-                margin: 1%;
-            }
-            mark {
-                background-color: lightgray;
-            }
-            a {
-                color: #00ffff;
-            }
-            a:visited {
-                color: #00ffff;
-            }
-            warn {
-                color: darkred;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="intro">
-            <pre>
- ___       ___  ________  _____ ______           ___  __    _______   ___       ___           ___    ___ 
-|\  \     |\  \|\   __  \|\   _ \  _   \        |\  \|\  \ |\  ___ \ |\  \     |\  \         |\  \  /  /|
-\ \  \    \ \  \ \  \|\  \ \  \\\__\ \  \       \ \  \/  /|\ \   __/|\ \  \    \ \  \        \ \  \/  / /
- \ \  \    \ \  \ \   __  \ \  \\|__| \  \       \ \   ___  \ \  \_|/_\ \  \    \ \  \        \ \    / / 
-  \ \  \____\ \  \ \  \ \  \ \  \    \ \  \       \ \  \\ \  \ \  \_|\ \ \  \____\ \  \____    \/  /  /  
-   \ \_______\ \__\ \__\ \__\ \__\    \ \__\       \ \__\\ \__\ \_______\ \_______\ \_______\__/  / /    
-    \|_______|\|__|\|__|\|__|\|__|     \|__|        \|__| \|__|\|_______|\|_______|\|_______|\___/ /     
-                                                                                            \|___|/      
-                                                                                                                                                                                                   
-Welcome to my personal site! To see a list of available commands and their function, type <mark>man</mark> to see manual.
-View my GitHub page (<a href="https://github.com/kliam11" target="_blank">https://github.com/kliam11</a>). Or say hi on LinkedIn (<a href="https://www.linkedin.com/in/liamakelly/" target="_blank">https://www.linkedin.com/in/liamakelly/</a>).
-
-<warn>**This site is best viewed on a laptop or PC**</warn>
-            </pre>
-        </div>
-        <div id="terminal-container"></div>
-        <script>
-            var user = 'visitor@';
-            let typedChars = 0;
-
-            document.addEventListener('DOMContentLoaded', function() {
-                fetchIPAddress();
-
-                const term = new Terminal({
-                    theme: {
-                        background: '#02020b',
-                        foreground: '#f8f8ff',
-                        cursor: '#f8f8ff',
-                        selection: 'rgba(0, 0, 255, 0.3)'
-                    },
-                    cols: 100,
-                    rows: 40
-                });
-
-                const termContainer = document.getElementById('terminal-container');
-
-                term.open(termContainer);
-
-                setTimeout(function() {
-                    term.write(user);
-                }, 750);
-
-                term.onKey(e => {
-                    const ev = e.domEvent;
-                    const printable = !ev.altKey && !ev.ctrlKey && !ev.metaKey;
-
-                    if (ev.keyCode === 13) {
-                        term.writeln('');
-                        term.write(user);
-                        typedChars = 0;
-                    } else if (ev.keyCode === 8) {
-                        if(typedChars > 0) {
-                            term.write('\b \b');
-                            typedChars--;
-                        }
-                    } else if (ev.keyCode === 37 || ev.keyCode === 39) {
-                        ev.preventDefault();
-                    } else if (ev.keyCode === 38 || ev.keyCode === 40) {
-                        ev.preventDefault();
-                    } else if (printable) {
-                        term.write(e.key);
-                        typedChars++;
-                    }
-                });
-                
-                term.focus();
-            });
-
-            async function fetchIPAddress() {
-                try {
-                    const response = await fetch('https://api.ipify.org?format=json');
-                    const data = await response.json();
-                    user = user + data.ip + ' ~ % ';
-                } catch (error) {
-                    user = user + 'default ~ % ';
-                }
-            }
-        </script>
-    </body>
+    <script src="./script.js"></script>
+</body>
 </html>
