@@ -1,7 +1,7 @@
 body {
     background-color: #1E1E1E;
     color: #E8E6E3;
-    height: 100vh;
+    height: 100lvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,6 +9,15 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {
