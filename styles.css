@@ -1,7 +1,7 @@
 body {
     background-color: #1E1E1E;
     color: #E8E6E3;
-    height: 100lvh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +14,6 @@ body {
 }
 
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
