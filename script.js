@@ -9,7 +9,7 @@ const krakenEmoji = "🦑";
 const bulletEmoji = "💥";
 
 let kills = 0;
-let killCounter;
+let killCounter = document.getElementById('killCounter');
 const rocket = { x: canvas.width / 2, y: canvas.height / 2, width: 50, height: 50, angle: 0 };
 const bullets = [];
 const krakens = [];
@@ -196,8 +196,9 @@ while (krakens.length < 3) {
 }
 
 if(!checkMobile()) {
-    killCounter = document.getElementById('killCounter');
     gameLoop();
+} else {
+    killCounter.textContent = ``;
 }
 
 shootingStarInterval();
