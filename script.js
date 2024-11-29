@@ -186,9 +186,16 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
+function checkMobile() {
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 while (krakens.length < 3) {
     spawnKraken();
 }
 
-gameLoop();
+if(!checkMobile()) {
+    gameLoop();
+}
+
 shootingStarInterval();
