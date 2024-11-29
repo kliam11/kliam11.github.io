@@ -9,6 +9,7 @@ const krakenEmoji = "🦑";
 const bulletEmoji = "💥";
 
 let kills = 0;
+let killCounter;
 const rocket = { x: canvas.width / 2, y: canvas.height / 2, width: 50, height: 50, angle: 0 };
 const bullets = [];
 const krakens = [];
@@ -106,7 +107,7 @@ function update() {
     const dx = cursor.x - rocket.x - rocket.width / 2;
     const dy = cursor.y - rocket.y - rocket.height / 2;
 
-    const speed = 1.5; 
+    const speed = 2; 
     const distance = Math.sqrt(dx * dx + dy * dy); 
 
     if (distance > speed) {
@@ -142,7 +143,7 @@ function update() {
                 if (kraken.health <= 0) {
                     krakens.splice(i, 1); // Remove kraken
                     kills++;
-                    document.getElementById('killCounter').textContent = `Kills: ${kills}`;
+                    killCounter.textContent = `Kills: ${kills}`;
                     spawnKraken(); 
                 }
             }
@@ -195,6 +196,7 @@ while (krakens.length < 3) {
 }
 
 if(!checkMobile()) {
+    killCounter = document.getElementById('killCounter');
     gameLoop();
 }
 
