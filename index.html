@@ -2,26 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Personal website of Liam Kelly, a Software Developer based in Ottawa, ON.">
+    <meta name="author" content="Liam Kelly">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="liamakelly" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liam Kelly</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
-    <canvas id="gameCanvas"></canvas>
-    <div id="killCounter">Kills: 0</div>
-    <div class="text-center">
-        <h1>hello world.</h1>
-        <p>
-            i'm liam, a software developer with a passion for creating efficient and scalable applications. 
-            i enjoy solving complex problems and bringing ideas to life.
-        </p>
+    <div class="container">
+        <div class="row">
+            <div id="bio" class="col-12 col-md-3">
+                <img src="./image/pfp.png" alt="Liam Kelly" class="img-fluid rounded-circle">
+                <h5>Liam Kelly</h5>
+                <p>Software Developer</p>
+                <div id="info">
+                    <span>Ottawa, ON</span>
+                </div>
+                <div id="svgs">
+                    <a href="https://www.linkedin.com/in/liamakelly"><img src="./image/linkedin-brands.svg" alt="Logo" width="30" height="30"></a>
+                    <a href="https://www.github.com/kliam11"><img src="./image/github-brands.svg" alt="Logo" width="30" height="30"></a>
+                    <a href="mailto:kliam549@gmail.com"><img src="./image/envelope-solid.svg" alt="Logo" width="30" height="30"></a>
+                </div>
+                <p id="rights">© All rights reserved.</p>
+            </div>
+            <div class="col-12 col-md-9">
+                <div id="about" class="container">
+                    <h3>About Me</h3>
+                    <p><b>CV: </b>(06/2025) <a href="rsc/cv.pdf">[download]</a></p>
+                    <p>
+                        Hi, my name is Liam. I’m a new grad of the Computer Science program at Carleton University, with a strong focus on systems programming, backend development, 
+                        and applied software engineering. Outside of work, I enjoy reading about politics, trying new foods, playing space-themed video games and cheering for the Maple Leafs.
+                    </p>
+                    <p>
+                        I’ve had the opportunity to work with several federal departments and private-sector organizations, where I focused on backend and systems-level development. In these roles, 
+                        I've primarily worked with C and Java to support projects ranging from embedded systems to enterprise applications. My responsibilities have included implementing server-side 
+                        logic, packet anaylsis, and contributing to the maintenance and enhancement of large, production-grade systems. These experiences have strengthened my ability to work 
+                        across the software stack and contribute to technically demanding environments. 
+                    </p>
+                </div>
+                <div id="projects" class="container">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/kliam11/cdn2025_polisent_analy">2025 Canadian Federal Election Sentiment Analysis</a><br/>
+                            Analysis of the 2025 Canadian Federal Election using Reddit data to determine sentiment towards major candidates and their respectve
+                            parties using BERT models and natural language processing techniques.
+                        </li>
+                    </ul>
+                </div>
+                <div id="album" class="container">
+                    <h3>Photos</h3>
+                    <p>I like to take scenic photos sometimes:</p>
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img src="album/IMG_9694.JPG" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="album/IMG_9695.JPG" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="album/IMG_9696.JPG" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="album/IMG_9107.JPG" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="contact" class="container">
+                    <h3>Contact</h3>
+                    <p>Feel free to reach out by email:</p>
+                    <p>kliam549 <b>[at]</b> gmail <b>[dot]</b> com</p>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <footer>
-        <a href="https://github.com/kliam11" target="_blank">github</a>
-        <a href="https://linkedin.com/in/liamakelly" target="_blank">linkedin</a>
-    </footer>
 
     <script src="./script.js"></script>
 </body>
