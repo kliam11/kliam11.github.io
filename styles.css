@@ -7,9 +7,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    html {
-        background-color: blue;
-    }
     body {
         margin: 0;
     }
