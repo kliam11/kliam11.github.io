@@ -7,14 +7,21 @@ body {
 }
 
 @media (max-width: 768px) {
+    html {
+        background-color: blue;
+    }
     body {
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0;
     }
 
     #bio {
         margin-left: 15px;
         margin-bottom: 25px;
+        margin-top: 50px;
+    }
+
+    #contact {
+        margin-bottom: 50px;
     }
 }
 
