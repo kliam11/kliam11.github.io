@@ -22,13 +22,6 @@ body {
     }
 }
 
-#lines {
-    position: absolute;
-    top: 0;
-    right: 5%;
-    height: 100%;
-}
-
 img {
     margin-bottom: 25px;
 }
